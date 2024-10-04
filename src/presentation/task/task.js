@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", loadTasks);
 
-document.getElementById("addButton").addEventListener("click", function() {
+document.getElementById("addButton").addEventListener("click", function () {
     const title = document.getElementById("titleInput").value;
     const about = document.getElementById("aboutInput").value;
 
@@ -31,18 +31,16 @@ function createTaskElement(taskId, title, about) {
     </div>
     `;
 
-    taskContainer.addEventListener("mouseenter", function() {
+    // Добавляем обработчик события для кнопки удаления
+    const deleteButton = taskContainer.querySelector(".delete-button");
+    addDeleteButtonListener(deleteButton, taskContainer);
+
+    taskContainer.addEventListener("mouseenter", function () {
         taskContainer.classList.add("hover");
     });
 
-    taskContainer.addEventListener("mouseleave", function() {
+    taskContainer.addEventListener("mouseleave", function () {
         taskContainer.classList.remove("hover");
-    });
-
-    taskContainer.querySelector(".delete-button").addEventListener("click", function() {
-        taskContainer.remove();
-        saveTasks();
-        toggleTaskLines();
     });
 
     const taskMessage = document.getElementById("taskMessage");
