@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import 'src/presentation/task/task.css';
 body {
   margin: 0;
@@ -35,7 +34,7 @@ body {
 }
 
 .add-button {
-  flex: 0 0 75px; /* Фиксированная ширина для кнопки */
+  flex: 0 0 75px;
   height: 75px;
   display: flex;
   justify-content: center;
