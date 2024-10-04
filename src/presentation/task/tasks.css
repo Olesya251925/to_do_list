@@ -1,0 +1,63 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.task-container {
+  background: #242320;
+  border: 3px solid #A35709;
+  border-radius: 10px;
+  height: auto;
+  width: calc(100% - 70px);
+  margin: 20px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px;
+}
+.task-container__text {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+.task-container .task-title {
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 25.78px;
+  text-align: left;
+  color: #F0E3CA;
+  margin: 0;
+}
+.task-container .task-about {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.41px;
+  text-align: left;
+  color: #F0E3CA;
+  margin: 0;
+}
+.task-container .delete-button {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  align-self: flex-start;
+  border: 2px solid #A35709; /* Граница кнопки */
+  background: #1B1A17; /* Фон кнопки */
+  border-radius: 5px; /* Закругление краев */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.task-container .delete-button img {
+  width: 10px; /* Уменьшенный размер изображения */
+  height: 10px; /* Уменьшенный размер изображения */
+}
+.task-container:hover {
+  margin: 15px auto; /* Уменьшаем отступы при наведении */
+  transition: margin 0.3s ease; /* Плавный переход для эффекта */
+}/*# sourceMappingURL=tasks.css.map */

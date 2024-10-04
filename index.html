@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/style/styles.css">
     <title>To-Do List</title>
+    
+    <link rel="stylesheet" href="src/style/stylesMain.css">
+    <link rel="stylesheet" href="src/presentation/task/tasks.css">
+
 </head>
 <body>
     <div class="container">
         <div class="input-container">
-            <input type="text" class="input-field" placeholder="Title..." />
-            <input type="text" class="input-field" placeholder="About..." />
+            <input type="text" class="input-field" id="titleInput" placeholder="Title..." />
+            <input type="text" class="input-field" id="aboutInput" placeholder="About..." />
         </div>
-        <button class="add-button">
+        <button class="add-button" id="addButton">
             <img src="src/icons/plus.png" alt="Add" class="add-icon" />
         </button>        
     </div>
 
     <div class="task-message" id="taskMessage">
         <hr class="task-line">
-        <span>No Task</span>
+        <span id="noTaskMessage">No Task</span>
         <hr class="task-line">
     </div>
-    <script src="src/script/script.js" type="module"></script>
 
+    <script src="src/presentation/task/task.js"></script>
 </body>
 </html>
