@@ -1,0 +1,50 @@
+.task-container {
+  background: #242320;
+  border: 3px solid #A35709;
+  border-radius: 10px;
+  height: 60px;
+  width: calc(100% - 70px);
+  margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.task-container:hover {
+  margin-bottom: 70px;
+}
+
+.icons-container {
+  display: none;
+  position: absolute;
+  right: 10px;
+  bottom: -55px;
+  padding: 5px;
+  display: flex;
+  border-radius: 5px;
+}
+
+.action-button {
+  background: transparent;
+  border: 3px solid #A35709;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-top: 0;
+}
+
+.action-button img {
+  width: 16px;
+  height: 16px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.task-container:hover .icons-container {
+  display: flex;
+}/*# sourceMappingURL=addition_task.css.map */
