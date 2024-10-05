@@ -31,7 +31,6 @@ function createTaskElement(taskId, title, about) {
     </div>
     `;
 
-    // Добавляем обработчик события для кнопки удаления
     const deleteButton = taskContainer.querySelector(".delete-button");
     addDeleteButtonListener(deleteButton, taskContainer);
 
@@ -45,6 +44,10 @@ function createTaskElement(taskId, title, about) {
 
     const taskMessage = document.getElementById("taskMessage");
     taskMessage.appendChild(taskContainer);
+
+    // Добавляем иконки действий для новой задачи
+    addActionIcons(taskContainer);
+
     toggleTaskLines();
 }
 
@@ -94,3 +97,4 @@ function toggleTaskLines() {
         }
     }
 }
+
