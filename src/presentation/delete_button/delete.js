@@ -9,18 +9,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function addDeleteButtonListener(button, taskContainer) {
     button.addEventListener("click", function () {
-        const taskId = taskContainer.dataset.id;
+        closeAllModals();
 
         const modalHTML = `
-            <div id="confirmDeleteModal" class="modal">
-                <div class="modal-content">
-                    <div class="modal-border-top"></div>
-                    <div class="modal-header">
+            <div id="confirmDeleteModal" class="modal-button-delete">
+                <div class="modal-content-button-delete">
+                    <div class="modal-border-top-button-delete"></div>
+                    <div class="modal-header-button-delete">
                         <h3 style="color: #FFFFFF; text-align: center;">Delete this task?</h3>
                     </div>
-                    <div class="modal-buttons">
-                        <button id="confirmDeleteButton" class="button">Yes</button>
-                        <button id="cancelDeleteButton" class="button">No</button>
+                    <div class="modal-buttons-button-delete">
+                        <button id="confirmDeleteButton" class="button-button-delete">Yes</button>
+                        <button id="cancelDeleteButton" class="button-button-delete">No</button>
                     </div>
                 </div>
             </div>
@@ -28,19 +28,17 @@ function addDeleteButtonListener(button, taskContainer) {
 
         document.body.insertAdjacentHTML('beforeend', modalHTML);
         const modal = document.getElementById("confirmDeleteModal");
-        const confirmDeleteButton = document.getElementById("confirmDeleteButton");
-        const cancelDeleteButton = document.getElementById("cancelDeleteButton");
 
         modal.style.display = "block";
 
-        confirmDeleteButton.onclick = function () {
+        document.getElementById("confirmDeleteButton").onclick = function () {
             taskContainer.remove();
             saveTasks();
             modal.style.display = "none";
             modal.remove();
         };
 
-        cancelDeleteButton.onclick = function () {
+        document.getElementById("cancelDeleteButton").onclick = function () {
             modal.style.display = "none";
             modal.remove();
         };
@@ -51,5 +49,13 @@ function addDeleteButtonListener(button, taskContainer) {
                 modal.remove();
             }
         };
+    });
+}
+
+function closeAllModals() {
+    const openModals = document.querySelectorAll('.modal-button-delete');
+    openModals.forEach(modal => {
+        modal.style.display = 'none';
+        modal.remove();
     });
 }

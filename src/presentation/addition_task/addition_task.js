@@ -28,16 +28,17 @@ function addActionIcons(taskContainer) {
     const infoIcon = iconsContainer.querySelector("#infoIcon");
 
     shareIcon.addEventListener("click", function () {
-
+        // логика для кнопки Share
     });
 
     editIcon.addEventListener("click", function () {
-
+        openEditModal(taskContainer);
     });
 
     infoIcon.addEventListener("click", function () {
-
+        //логика для кнопки Info
     });
+
 
     taskContainer.addEventListener("mouseenter", function () {
         iconsContainer.style.display = "flex";

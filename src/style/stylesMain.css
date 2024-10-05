@@ -31,6 +31,12 @@ body {
   color: rgba(240, 227, 202, 0.6392156863);
   padding: 0 10px;
   box-sizing: border-box;
+  outline: none;
+  transition: background 0.3s;
+}
+
+.input-field:hover {
+  background: rgba(255, 131, 3, 0.2);
 }
 
 .add-button {

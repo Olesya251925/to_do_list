@@ -1,6 +1,5 @@
 @import 'src/presentation/task/task.css';
 
-
 body {
     margin: 0;
     background: #1B1A17;
@@ -33,6 +32,12 @@ body {
     color: #F0E3CAA3;
     padding: 0 10px;
     box-sizing: border-box;
+    outline: none;
+    transition: background 0.3s;
+}
+
+.input-field:hover {
+    background: rgba(255, 131, 3, 0.2);
 }
 
 .add-button {
@@ -65,7 +70,6 @@ body {
 .add-button:hover .add-icon {
     filter: brightness(0) invert(1);
 }
-
 
 @media (max-width: 600px) {
     .container {

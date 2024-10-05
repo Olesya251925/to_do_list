@@ -1,4 +1,4 @@
-.modal {
+.modal-button-delete {
   display: none;
   position: fixed;
   z-index: 1000;
@@ -10,7 +10,7 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-border-top {
+.modal-border-top-button-delete {
   height: 5px;
   background-color: #A35709;
   position: absolute;
@@ -19,7 +19,7 @@
   top: 0;
 }
 
-.modal-content {
+.modal-content-button-delete {
   background: #1B1A17;
   padding: 20px;
   width: 80%;
@@ -31,19 +31,19 @@
   transform: translate(-50%, -50%);
 }
 
-.modal-header {
+.modal-header-button-delete {
   text-align: center;
   padding-bottom: 10px;
   color: #FFFFFF;
 }
 
-.modal-buttons {
+.modal-buttons-button-delete {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
 }
 
-.button {
+.button-button-delete {
   border: 3px solid #A35709;
   background: transparent;
   color: #FFFFFF;
@@ -53,7 +53,7 @@
   transition: background 0.3s;
 }
 
-.button:hover {
+.button-button-delete:hover {
   background: #A35709;
   color: #FFFFFF;
 }/*# sourceMappingURL=delete.css.map */
