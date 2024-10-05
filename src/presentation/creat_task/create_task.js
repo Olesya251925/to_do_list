@@ -45,7 +45,6 @@ function createTaskElement(taskId, title, about) {
     const taskMessage = document.getElementById("taskMessage");
     taskMessage.appendChild(taskContainer);
 
-    // Добавляем иконки действий для новой задачи
     addActionIcons(taskContainer);
 
     toggleTaskLines();
