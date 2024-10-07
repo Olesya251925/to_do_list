@@ -6,16 +6,16 @@ function openEditModal(taskContainer) {
         modal.className = "modal";
 
         modal.innerHTML = `
-            <div class="modal-content">
-                <input id="miniInput" placeholder="Mini Input" style="background: #242320; color: #F0E3CA; margin-top: 20px;" />
-                <textarea id="maxInput" placeholder="Max Input" style="background: #242320; color: #F0E3CA; height: 300px;"></textarea>
-
-                <div class="modal-buttons">
-                    <button-cancel-save id="cancelButton">Cancel</button-cancel-save>
-                    <button-cancel-save id="saveButton">Save</button-cancel-save>
-                </div>
+        <div class="modal-content" style="padding: 20px;">
+            <input id="miniInput" placeholder="Mini Input" style="background: #242320; color: #F0E3CA; margin-top: 20px; width: 99%;" />
+            <textarea id="maxInput" placeholder="Max Input" style="background: #242320; color: #F0E3CA; height: 300px; width: 99%;"></textarea>
+    
+            <div class="modal-buttons">
+                <button-cancel-save id="cancelButton">Cancel</button-cancel-save>
+                <button-cancel-save id="saveButton">Save</button-cancel-save>
             </div>
-        `;
+        </div>
+    `;
 
         modal.querySelector('#cancelButton').onclick = function () {
             modal.style.display = "none";

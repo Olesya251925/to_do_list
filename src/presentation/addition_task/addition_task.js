@@ -28,7 +28,7 @@ function addActionIcons(taskContainer) {
     const infoIcon = iconsContainer.querySelector("#infoIcon");
 
     shareIcon.addEventListener("click", function () {
-        // логика для кнопки Share
+        openShareModal();
     });
 
     editIcon.addEventListener("click", function () {
