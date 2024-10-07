@@ -34,6 +34,7 @@ function addDeleteButtonListener(button, taskContainer) {
         document.getElementById("confirmDeleteButton").onclick = function () {
             taskContainer.remove();
             saveTasks();
+            toggleTaskLines();
             modal.style.display = "none";
             modal.remove();
         };

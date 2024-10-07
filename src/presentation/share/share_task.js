@@ -1,4 +1,4 @@
-function openShareModal() {
+function openShareModal(title, about) {
     const overlay = document.createElement('div');
     overlay.classList.add('modal-overlay');
 
@@ -7,7 +7,7 @@ function openShareModal() {
 
     modal.innerHTML = `
         <div class="modal-share-content">
-            <button class="share-button">
+            <button class="share-button" id="copy-button">
                 <img src="src/icons/copy.png" alt="Copy">
             </button>
             <button class="share-button">
@@ -29,8 +29,18 @@ function openShareModal() {
     document.body.appendChild(modal);
     document.body.classList.add('modal-open');
 
-
     overlay.addEventListener('click', closeShareModal);
+
+    const copyButton = document.getElementById('copy-button');
+    copyButton.addEventListener('click', () => {
+        const textToCopy = `${title}\n${about}`;
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            console.log('Текст скопирован в буфер обмена');
+            closeShareModal();
+        }).catch(err => {
+            console.error('Ошибка при копировании текста: ', err);
+        });
+    });
 }
 
 function closeShareModal() {
@@ -39,6 +49,7 @@ function closeShareModal() {
     if (modal && overlay) {
         modal.remove();
         overlay.remove();
-        document.body.classList.remove('modal-open');  // Восстанавливаем прокрутку и взаимодействие с фоном
+        document.body.classList.remove('modal-open');
     }
 }
+

@@ -87,7 +87,7 @@ function toggleTaskLines() {
 
             const noTaskMessage = document.createElement("span");
             noTaskMessage.id = "noTaskMessage";
-            noTaskMessage.innerText = "No Task";
+            noTaskMessage.innerText = "No tasks";
             taskMessage.appendChild(noTaskMessage);
 
             const bottomLine = document.createElement("hr");

@@ -1,10 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const tasks = document.querySelectorAll(".task-container");
-    tasks.forEach(task => {
-        addActionIcons(task);
-    });
-});
-
 function addActionIcons(taskContainer) {
     const iconsContainer = document.createElement("div");
     iconsContainer.className = "icons-container";
@@ -28,7 +21,7 @@ function addActionIcons(taskContainer) {
     const infoIcon = iconsContainer.querySelector("#infoIcon");
 
     shareIcon.addEventListener("click", function () {
-        openShareModal();
+        openShareModal(taskContainer.querySelector(".task-title").innerText, taskContainer.querySelector(".task-about").innerText);
     });
 
     editIcon.addEventListener("click", function () {
@@ -36,27 +29,14 @@ function addActionIcons(taskContainer) {
     });
 
     infoIcon.addEventListener("click", function () {
-        //логика для кнопки Info
+        // Логика для кнопки Info
     });
-
 
     taskContainer.addEventListener("mouseenter", function () {
         iconsContainer.style.display = "flex";
     });
 
     taskContainer.addEventListener("mouseleave", function () {
-        setTimeout(function () {
-            if (!iconsContainer.matches(':hover') && !taskContainer.matches(':hover')) {
-                iconsContainer.style.display = "none";
-            }
-        }, 100);
-    });
-
-    iconsContainer.addEventListener("mouseenter", function () {
-        iconsContainer.style.display = "flex";
-    });
-
-    iconsContainer.addEventListener("mouseleave", function () {
         setTimeout(function () {
             if (!iconsContainer.matches(':hover') && !taskContainer.matches(':hover')) {
                 iconsContainer.style.display = "none";
