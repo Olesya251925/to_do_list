@@ -1,4 +1,3 @@
-@import 'src/presentation/task/task.css';
 body {
   margin: 0;
   background: #1B1A17;
@@ -25,7 +24,7 @@ body {
 
 .input-field {
   width: 100%;
-  height: 35px;
+  height: 50px;
   background: #242320;
   border: 1px solid #FF8303;
   color: rgba(240, 227, 202, 0.6392156863);
@@ -33,6 +32,7 @@ body {
   box-sizing: border-box;
   outline: none;
   transition: background 0.3s;
+  font-size: 18px;
 }
 
 .input-field:hover {
@@ -40,12 +40,12 @@ body {
 }
 
 .add-button {
-  flex: 0 0 75px;
-  height: 75px;
+  flex: 0 0 99px;
+  height: 99px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #FF8303;
+  border: 3px solid #FF8303;
   background: #1B1A17;
   color: #FF8303;
   cursor: pointer;
@@ -91,10 +91,11 @@ body {
   margin: 20px 0;
   color: white;
   padding: 10px 0;
+  font-size: 27px;
 }
 
 .task-line {
-  width: 35px;
+  width: 52px;
   height: 2px;
   background-color: #FF8303;
   border: none;

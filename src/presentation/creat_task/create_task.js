@@ -22,7 +22,7 @@ function createTaskElement(taskId, title, about) {
     taskContainer.dataset.id = taskId;
 
     taskContainer.innerHTML = `
-    <div class="task-container__text">
+    <div class="task-container-text">
         <h3 class="task-title">${title}</h3>
         <p class="task-about">${about}</p>
     </div>

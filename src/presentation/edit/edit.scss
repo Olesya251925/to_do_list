@@ -72,3 +72,11 @@ textarea {
     font-family: Arial;
     outline: none;
 }
+
+@media (max-width: 300px) {
+    .modal-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
