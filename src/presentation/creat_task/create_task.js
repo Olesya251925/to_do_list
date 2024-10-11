@@ -31,6 +31,9 @@ function createTaskElement(taskId, title, about) {
     </div>
     `;
 
+    taskContainer.style.height = "auto";
+
+
     const deleteButton = taskContainer.querySelector(".delete-button");
     addDeleteButtonListener(deleteButton, taskContainer);
 

@@ -17,16 +17,23 @@ body {
     width: 100%;
 }
 
+#error-message {
+    color: red;
+    display: none;
+    text-align: center;
+}
+
+
 .modal-content {
     background: #1B1A17;
     width: calc(100% - 40px);
-    height: auto;
-    max-height: 500px;
+    max-height: 80vh;
     padding: 20px;
     border-radius: 10px 10px 0 0;
-    overflow: auto;
+    overflow: hidden;
     box-sizing: border-box;
 }
+
 
 .close {
     position: absolute;

@@ -8,13 +8,12 @@ body {
   background: #242320;
   border: 3px solid #A35709;
   border-radius: 10px;
-  min-height: 80px;
-  width: calc(100% - 70px);
+  width: 400px;
   margin: 10px auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 10px;
   transition: transform 0.3s ease;
 }
@@ -22,7 +21,21 @@ body {
 .task-container-text {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   margin-right: 10px;
+  max-width: calc(100% - 50px);
+  overflow: hidden;
+}
+
+.task-about {
+  font-family: Roboto;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: #F0E3CA;
+  margin: 0;
+  overflow-wrap: break-word;
 }
 
 .task-title {
@@ -34,16 +47,6 @@ body {
   color: #F0E3CA;
   margin: 0;
   margin-bottom: 10px;
-}
-
-.task-about {
-  font-family: Roboto;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 16.41px;
-  text-align: left;
-  color: #F0E3CA;
-  margin: 0;
 }
 
 .delete-button {

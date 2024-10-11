@@ -1,5 +1,8 @@
 function openEditModal(taskContainer) {
     let modal = document.getElementById("editModal");
+    const titleElement = taskContainer.querySelector('.task-title');
+    const descriptionElement = taskContainer.querySelector('.task-about');
+
     if (!modal) {
         modal = document.createElement("div");
         modal.id = "editModal";
@@ -14,6 +17,7 @@ function openEditModal(taskContainer) {
                 <button-cancel-save id="cancelButton">Cancel</button-cancel-save>
                 <button-cancel-save id="saveButton">Save</button-cancel-save>
             </div>
+            <p id="error-message" style="color: red; display: none; text-align: center;">Оба поля должны быть заполнены!</p>
         </div>
     `;
 
@@ -23,10 +27,14 @@ function openEditModal(taskContainer) {
         };
 
         modal.querySelector('#saveButton').onclick = function () {
-            const titleElement = taskContainer.querySelector('.task-title');
-            const descriptionElement = taskContainer.querySelector('.task-about');
-            const miniInputValue = modal.querySelector('#miniInput').value;
-            const maxInputValue = modal.querySelector('#maxInput').value;
+            const miniInputValue = modal.querySelector('#miniInput').value.trim();
+            const maxInputValue = modal.querySelector('#maxInput').value.trim();
+
+            if (!miniInputValue || !maxInputValue) {
+                const errorMessage = modal.querySelector('#error-message');
+                errorMessage.style.display = 'block';
+                return;
+            }
 
             titleElement.innerText = miniInputValue;
             descriptionElement.innerText = maxInputValue;
@@ -47,6 +55,9 @@ function openEditModal(taskContainer) {
 
         document.body.appendChild(modal);
     }
+
+    modal.querySelector('#miniInput').value = titleElement.innerText;
+    modal.querySelector('#maxInput').value = descriptionElement.innerText;
 
     modal.style.display = "flex";
 }
