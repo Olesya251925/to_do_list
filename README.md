@@ -26,8 +26,8 @@ When you click on the "delete" button, a modal window pops up confirming the del
 ### Buttons for every task
 
 * **Share Button**
-* **Edit Button**
 * **Information Button**
+* **Edit Button**
 <img width="1435" alt="Снимок экрана 2024-10-11 в 21 41 02" src="https://github.com/user-attachments/assets/df81b3d0-78f9-4771-a5c6-1231a7bccbee">
 
 When you click on the share button, the following buttons appear:
@@ -54,6 +54,8 @@ If we want to save, but the fields are empty, an exception will be shown
 
 <img width="1435" alt="Снимок экрана 2024-10-11 в 21 52 17" src="https://github.com/user-attachments/assets/92e539b4-308b-4977-9830-8b7c0d888d9b">
 
+# Project
+![Гифка с Gifius ru](https://github.com/user-attachments/assets/fd2a8052-2219-42e4-b5d3-d8dfdfc5db9d)
 
 
 
