@@ -56,6 +56,7 @@ If we want to save, but the fields are empty, an exception will be shown
 
 ### Long text
 If a task has long text, the full text will be displayed when you hover over the task
+
 **To:**
 <img width="1431" alt="Снимок экрана 2024-10-11 в 23 42 19" src="https://github.com/user-attachments/assets/08f1adea-1619-4968-baf8-d3901c6c5f1a">
 **After**
