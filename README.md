@@ -61,7 +61,8 @@ If a task has long text, the full text will be displayed when you hover over the
 <img width="1431" alt="Снимок экрана 2024-10-11 в 23 42 19" src="https://github.com/user-attachments/assets/08f1adea-1619-4968-baf8-d3901c6c5f1a">
 
 **After:**
-<img width="1437" alt="Снимок экрана 2024-10-11 в 23 43 48" src="https://github.com/user-attachments/assets/d65784ed-73dc-4533-9a2d-8d7fffc244ca">
+<img width="1436" alt="Снимок экрана 2024-10-11 в 23 48 11" src="https://github.com/user-attachments/assets/33618e7b-c78c-46b1-93f3-c5cb4e1f1f0f">
+
 
 # Project
 ![Гифка с Gifius ru](https://github.com/user-attachments/assets/fd2a8052-2219-42e4-b5d3-d8dfdfc5db9d)
