@@ -59,7 +59,8 @@ If a task has long text, the full text will be displayed when you hover over the
 
 **To:**
 <img width="1431" alt="Снимок экрана 2024-10-11 в 23 42 19" src="https://github.com/user-attachments/assets/08f1adea-1619-4968-baf8-d3901c6c5f1a">
-**After**
+
+**After:**
 <img width="1437" alt="Снимок экрана 2024-10-11 в 23 43 48" src="https://github.com/user-attachments/assets/d65784ed-73dc-4533-9a2d-8d7fffc244ca">
 
 # Project
