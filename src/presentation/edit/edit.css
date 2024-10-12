@@ -16,14 +16,7 @@ body {
   right: 0;
   width: 100%;
 }
-
-#error-message {
-  color: red;
-  display: none;
-  text-align: center;
-}
-
-.modal-content {
+.modal .modal-content {
   background: #1B1A17;
   width: calc(100% - 40px);
   max-height: 80vh;
@@ -32,22 +25,35 @@ body {
   overflow: hidden;
   box-sizing: border-box;
 }
-
-.close {
+.modal .modal-content .close {
   position: absolute;
   top: 10px;
   right: 10px;
   cursor: pointer;
 }
-
-.modal-buttons {
+.modal .modal-content .modal-input,
+.modal .modal-content .modal-textarea {
+  background: #242320;
+  color: #F0E3CA;
+  width: 99%;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #A35709;
+  font-family: Arial;
+  outline: none;
+}
+.modal .modal-content .modal-input.modal-textarea,
+.modal .modal-content .modal-textarea.modal-textarea {
+  height: 300px;
+}
+.modal .modal-buttons {
   display: flex;
   justify-content: center;
   margin-top: 20px;
   gap: 20px;
 }
-
-button-cancel-save {
+.modal .modal-buttons button-cancel-save {
   border: 1px solid #A35709;
   color: #D9D9D9;
   background: #242320;
@@ -61,21 +67,21 @@ button-cancel-save {
   justify-content: center;
   text-align: center;
 }
-
-button-cancel-save:hover {
+.modal .modal-buttons button-cancel-save:hover {
   background: #A35709;
   color: #FFFFFF;
 }
 
-input,
-textarea {
-  width: 95%;
-  margin: 5px 0;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #A35709;
-  font-family: Arial;
-  outline: none;
+#error-message {
+  color: red;
+  display: none;
+  text-align: center;
+}
+
+.error-message {
+  color: red;
+  display: none;
+  text-align: center;
 }
 
 @media (max-width: 300px) {

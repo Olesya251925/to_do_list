@@ -17,8 +17,7 @@ body {
   padding: 10px;
   transition: transform 0.3s ease;
 }
-
-.task-container-text {
+.task-container .task-container-text {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -26,8 +25,7 @@ body {
   max-width: calc(100% - 50px);
   overflow: hidden;
 }
-
-.task-about {
+.task-container .task-container-text .task-about {
   font-family: Roboto;
   font-size: 17px;
   font-weight: 400;
@@ -37,8 +35,7 @@ body {
   margin: 0;
   overflow-wrap: break-word;
 }
-
-.task-title {
+.task-container .task-container-text .task-title {
   font-family: Roboto;
   font-size: 27px;
   font-weight: 500;
@@ -48,8 +45,7 @@ body {
   margin: 0;
   margin-bottom: 10px;
 }
-
-.delete-button {
+.task-container .delete-button {
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -61,19 +57,16 @@ body {
   align-items: center;
   transition: background 0.3s, transform 0.3s;
 }
-
-.delete-button:hover {
+.task-container .delete-button:hover {
   background: #A35709;
   transform: scale(1.05);
 }
-
-.delete-button img {
+.task-container .delete-button img {
   width: 18px;
   height: 18px;
   transition: filter 0.3s;
 }
-
-.delete-button:hover img {
+.task-container .delete-button img:hover {
   filter: brightness(0) invert(1);
 }
 

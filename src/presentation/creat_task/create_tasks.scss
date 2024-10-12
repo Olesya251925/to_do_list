@@ -16,65 +16,65 @@ body {
     align-items: flex-start;
     padding: 10px;
     transition: transform 0.3s ease;
-}
 
-.task-container-text {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    margin-right: 10px;
-    max-width: calc(100% - 50px);
-    overflow: hidden;
-}
+    .task-container-text {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        margin-right: 10px;
+        max-width: calc(100% - 50px);
+        overflow: hidden;
 
-.task-about {
-    font-family: Roboto;
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 24px;
-    text-align: left;
-    color: #F0E3CA;
-    margin: 0;
-    overflow-wrap: break-word;
-}
+        .task-about {
+            font-family: Roboto;
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+            color: #F0E3CA;
+            margin: 0;
+            overflow-wrap: break-word;
+        }
 
-.task-title {
-    font-family: Roboto;
-    font-size: 27px;
-    font-weight: 500;
-    line-height: 25.78px;
-    text-align: left;
-    color: #F0E3CA;
-    margin: 0;
-    margin-bottom: 10px;
-}
+        .task-title {
+            font-family: Roboto;
+            font-size: 27px;
+            font-weight: 500;
+            line-height: 25.78px;
+            text-align: left;
+            color: #F0E3CA;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+    }
 
-.delete-button {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    border: 2px solid #A35709;
-    background: #1B1A17;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background 0.3s, transform 0.3s;
-}
+    .delete-button {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        border: 2px solid #A35709;
+        background: #1B1A17;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background 0.3s, transform 0.3s;
 
-.delete-button:hover {
-    background: #A35709;
-    transform: scale(1.05);
-}
+        &:hover {
+            background: #A35709;
+            transform: scale(1.05);
+        }
 
-.delete-button img {
-    width: 18px;
-    height: 18px;
-    transition: filter 0.3s;
-}
+        img {
+            width: 18px;
+            height: 18px;
+            transition: filter 0.3s;
 
-.delete-button:hover img {
-    filter: brightness(0) invert(1);
+            &:hover {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
 }
 
 .task-container.hover {
@@ -99,10 +99,10 @@ body {
     .delete-button {
         width: 35px;
         height: 35px;
-    }
 
-    .delete-button img {
-        width: 15px;
-        height: 15px;
+        img {
+            width: 15px;
+            height: 15px;
+        }
     }
 }

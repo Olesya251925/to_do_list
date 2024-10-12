@@ -21,10 +21,12 @@ function createTaskElement(taskId, title, about) {
     taskContainer.className = "task-container";
     taskContainer.dataset.id = taskId;
 
+    const truncatedAbout = about.length > 50 ? about.substring(0, 50) + "..." : about;
+
     taskContainer.innerHTML = `
     <div class="task-container-text">
         <h3 class="task-title">${title}</h3>
-        <p class="task-about">${about}</p>
+        <p class="task-about" title="${about}">${truncatedAbout}</p>
     </div>
     <div class="delete-button">
         <img src="src/icons/cross.png" alt="Удалить">
@@ -33,16 +35,28 @@ function createTaskElement(taskId, title, about) {
 
     taskContainer.style.height = "auto";
 
+    taskContainer.addEventListener('mouseover', function () {
+        taskContainer.style.transform = 'scale(1.03)';
+        taskContainer.style.transition = 'transform 0.2s ease';
+    });
+
+    taskContainer.addEventListener('mouseout', function () {
+        taskContainer.style.transform = 'scale(1)';
+    });
 
     const deleteButton = taskContainer.querySelector(".delete-button");
     addDeleteButtonListener(deleteButton, taskContainer);
 
-    taskContainer.addEventListener("mouseenter", function () {
-        taskContainer.classList.add("hover");
-    });
+    const aboutElement = taskContainer.querySelector('.task-about');
+    aboutElement.addEventListener('click', function () {
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        const taskId = taskContainer.dataset.id;
+        const task = tasks.find(task => task.id === taskId);
 
-    taskContainer.addEventListener("mouseleave", function () {
-        taskContainer.classList.remove("hover");
+        if (task) {
+            const fullText = task.about;
+            aboutElement.innerText = aboutElement.innerText === truncatedAbout ? fullText : truncatedAbout;
+        }
     });
 
     const taskMessage = document.getElementById("taskMessage");
@@ -56,7 +70,7 @@ function createTaskElement(taskId, title, about) {
 function saveTasks() {
     const tasks = Array.from(document.querySelectorAll(".task-container")).map(container => {
         const title = container.querySelector(".task-title").innerText;
-        const about = container.querySelector(".task-about").innerText;
+        const about = container.querySelector(".task-about").getAttribute("title");
         const id = container.dataset.id;
         return { id, title, about };
     });
@@ -64,12 +78,16 @@ function saveTasks() {
 }
 
 function loadTasks() {
+    const taskMessage = document.getElementById("taskMessage");
+    taskMessage.innerHTML = '';
+
     const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
     tasks.forEach(task => {
         createTaskElement(task.id, task.title, task.about);
     });
     toggleTaskLines();
 }
+
 
 function toggleTaskLines() {
     const taskMessage = document.getElementById("taskMessage");
@@ -99,4 +117,3 @@ function toggleTaskLines() {
         }
     }
 }
-

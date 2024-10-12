@@ -9,18 +9,17 @@ function openEditModal(taskContainer) {
         modal.className = "modal";
 
         modal.innerHTML = `
-        <div class="modal-content" style="padding: 20px;">
-            <input id="miniInput" placeholder="Mini Input" style="background: #242320; color: #F0E3CA; margin-top: 20px; width: 99%;" />
-            <textarea id="maxInput" placeholder="Max Input" style="background: #242320; color: #F0E3CA; height: 300px; width: 99%;"></textarea>
-    
-            <div class="modal-buttons">
-                <button-cancel-save id="cancelButton">Cancel</button-cancel-save>
-                <button-cancel-save id="saveButton">Save</button-cancel-save>
-            </div>
-            <p id="error-message" style="color: red; display: none; text-align: center;">Оба поля должны быть заполнены!</p>
-        </div>
-    `;
+     <div class="modal-content">
+        <input id="miniInput" class="modal-input" placeholder="Mini Input" />
+        <textarea id="maxInput" class="modal-textarea" placeholder="Max Input"></textarea>
 
+        <div class="modal-buttons">
+            <button-cancel-save id="cancelButton">Cancel</button-cancel-save>
+            <button-cancel-save id="saveButton">Save</button-cancel-save>
+        </div>
+        <p id="error-message" class="error-message">Both fields must be filled in!</p>
+    </div>
+`;
         modal.querySelector('#cancelButton').onclick = function () {
             modal.style.display = "none";
             modal.remove();
@@ -37,7 +36,9 @@ function openEditModal(taskContainer) {
             }
 
             titleElement.innerText = miniInputValue;
-            descriptionElement.innerText = maxInputValue;
+            descriptionElement.innerText = maxInputValue.length > 50 ? maxInputValue.substring(0, 50) + "..." : maxInputValue;
+            descriptionElement.setAttribute("title", maxInputValue);
+
 
             const taskId = taskContainer.dataset.id;
             const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
@@ -49,15 +50,18 @@ function openEditModal(taskContainer) {
             });
             localStorage.setItem('tasks', JSON.stringify(updatedTasks));
 
+            loadTasks();
+
             modal.style.display = "none";
             modal.remove();
         };
+
 
         document.body.appendChild(modal);
     }
 
     modal.querySelector('#miniInput').value = titleElement.innerText;
-    modal.querySelector('#maxInput').value = descriptionElement.innerText;
+    modal.querySelector('#maxInput').value = descriptionElement.getAttribute("title");
 
     modal.style.display = "flex";
 }
