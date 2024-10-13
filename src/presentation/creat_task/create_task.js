@@ -36,7 +36,7 @@ function createTaskElement(taskId, title, about) {
     taskContainer.style.height = "auto";
 
     taskContainer.addEventListener('mouseover', function () {
-        taskContainer.style.transform = 'scale(1.03)';
+        taskContainer.style.transform = 'scale(1.01)';
         taskContainer.style.transition = 'transform 0.2s ease';
     });
 
