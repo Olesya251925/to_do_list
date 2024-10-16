@@ -2,6 +2,10 @@
 
 ## Description
 
+## Gantt chart and time estimation
+
+https://docs.google.com/spreadsheets/d/15_pzWxObhdZmbiwBoHgAqyTf6k0aqVHLRHbVDuZInX4/edit?usp=sharing
+
 ### Main Screen
 
 There are two fields on the main screen: 
@@ -44,7 +48,7 @@ If you click the copy button, the text is copied to the clipboard
 
 <img width="1434" alt="Снимок экрана 2024-10-11 в 21 47 15" src="https://github.com/user-attachments/assets/2ba91eb4-1a28-467a-8698-361594c83df0">
 
-### edit button
+### Edit button
 
 When you click on the edit button, a modal window will open with existing text that can be edited
 
@@ -55,7 +59,7 @@ If we want to save, but the fields are empty, an exception will be shown
 <img width="1435" alt="Снимок экрана 2024-10-11 в 21 52 17" src="https://github.com/user-attachments/assets/92e539b4-308b-4977-9830-8b7c0d888d9b">
 
 ### Long text
-If a task has long text, the full text will be displayed when you hover over the task
+If a task has long text, the full text will be displayed when you click on the task.
 
 **To:**
 <img width="1431" alt="Снимок экрана 2024-10-11 в 23 42 19" src="https://github.com/user-attachments/assets/08f1adea-1619-4968-baf8-d3901c6c5f1a">
